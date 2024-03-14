@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .container{
+            height: 100vh;
+            width: 100vw;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .button{
+            height: 50px;
+            width: 150px;
+            background-color: white;
+            border-radius: 30px;
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+           
+        }
+        .circle{
+            height: 90%;
+            background-color: black;
+            width: 30%;
+            border-radius: 50%;
+            margin-left: 2px;
+            margin-right: 2px;
+            position: relative;
+            
+
+        }
+        /* .circle:hover{
+            animation: move forwards ease-in 1s;
+        } */
+
+        @keyframes move {
+            0%{
+                left: 0px;
+            }
+            25%{
+                left: 25px;
+            }
+            50%{
+                left:50px
+            }
+
+            75%{
+                left: 75px;
+            }
+            
+            100%{
+              left: 100px;
+              background-color: white;
+              
+            }
+        }
+        @keyframes blackbut {
+            50%{
+                background-color: pink;
+            }
+            100%{
+                background-color: black;
+            }
+        }
+        @keyframes whitebut {
+            0%{
+                background-color: black;
+            }
+            50%{
+                background-color: pink;
+            }
+            100%{
+                background-color: white;
+            }
+        }
+        @keyframes moveright {
+            0%{
+                left: 100px;
+            }
+            25%{
+                left: 75px;
+            }
+            50%{
+                left:50px
+            }
+
+            75%{
+                left: 25px;
+            }
+            
+            100%{
+              left: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="button">
+        <div class="circle"></div>
+    </div>
+    <script>
+        let left=true;
+        document.querySelector(".button").addEventListener("click",()=>{
+            if(left){
+            document.querySelector(".circle").style.animation="move forwards ease-in 0.3s "
+            document.querySelector(".button").style.animation="blackbut forwards ease-in 0.3s"
+            left=false;
+            }
+            else{
+                document.querySelector(".circle").style.animation="moveright ease-in 0.3s"
+                document.querySelector(".button").style.animation="whitebut forwards ease-out 0.5s"
+                left=true
+            }
+        })
+    </script>
+</div>
+</body>
+</html>
+
+functionname(para1 , para2){
+
+}
+
+functionname=(para1 , para2)=>{
+
+}
+
+
+()=>{
+
+}
