@@ -14,13 +14,15 @@
             align-items: center;
         }
         .button{
-            height: 50px;
-            width: 150px;
+            height: 30px;
+            width: 100px;
             background-color: white;
             border-radius: 30px;
             display: flex;
             /* justify-content: center; */
             align-items: center;
+            border: 2px solid;
+            padding: 4px;
            
         }
         .circle{
@@ -28,40 +30,25 @@
             background-color: black;
             width: 30%;
             border-radius: 50%;
-            margin-left: 2px;
-            margin-right: 2px;
             position: relative;
+            border: 2px solid red;
             
 
         }
-        /* .circle:hover{
-            animation: move forwards ease-in 1s;
-        } */
-
+      
         @keyframes move {
             0%{
-                left: 0px;
+                left: 0%;
             }
-            25%{
-                left: 25px;
-            }
-            50%{
-                left:50px
-            }
-
-            75%{
-                left: 75px;
-            }
-            
+         
             100%{
-              left: 100px;
-              background-color: white;
-              
+              left: 65%;
+              background-color: white;  
             }
         }
         @keyframes blackbut {
             50%{
-                background-color: pink;
+                background-color: darkgray;
             }
             100%{
                 background-color: black;
@@ -72,7 +59,7 @@
                 background-color: black;
             }
             50%{
-                background-color: pink;
+                background-color: darkgray;
             }
             100%{
                 background-color: white;
@@ -80,21 +67,10 @@
         }
         @keyframes moveright {
             0%{
-                left: 100px;
+                left: 65%;
             }
-            25%{
-                left: 75px;
-            }
-            50%{
-                left:50px
-            }
-
-            75%{
-                left: 25px;
-            }
-            
             100%{
-              left: 0px;
+              left: 0%;
             }
         }
     </style>
@@ -122,16 +98,3 @@
 </div>
 </body>
 </html>
-
-functionname(para1 , para2){
-
-}
-
-functionname=(para1 , para2)=>{
-
-}
-
-
-()=>{
-
-}
