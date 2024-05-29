@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+div{
+    height: 150px;
+    width: 150px;
+    border-left: 10px solid green;
+    border-top: 10px solid purple;
+    border-right: 10px solid rgb(212, 201, 39);
+    border-bottom: 10px solid rgb(26, 214, 247);
+    border-style:dotted ;
+    border-radius: 50%;
+    animation: rotate 10s ease-in-out 0s infinite forwards ; 
+}
+
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(10000deg);
+    }
+    
+}
+
+    </style>
+</head>
+<body>
+    <div>
+        
+    </div>
+</body>
+</html>
