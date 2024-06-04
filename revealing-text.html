@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revealing text</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: content-box;
+        }
+        .main{
+            background-color: black;
+            height: 400vh;
+            width: 100%;
+        }
+        .otherContent{
+            height: 100vh;
+            width: 100%;
+            background-color: gray;
+        }
+        .scroll-reveal {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: aliceblue;
+            
+            
+           
+            
+        }
+    
+            .scroll-reveal > *{
+                
+                
+            }
+            
+        .content{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                width: 50vw;
+                
+                height: 100%;
+                
+        }
+
+        
+
+        .content h1{
+            font-size: 10vh;
+            
+        }
+        .content p{
+            font-size: 3vh;
+        }
+
+        .content span{
+            background-image: linear-gradient(90deg,red,blue);
+            background-size: 0% 100%;
+            background-repeat: no-repeat;
+            background-clip: text;
+            color:hsl(0 0% 100%/0.2);
+            animation: reveal linear forwards;
+            animation-timeline: view();
+
+            display: inline;
+        }
+
+        .content h1 span{
+            animation-range-start: cover 20%;
+            animation-range-end: cover 30%;
+        }
+        .content p span{
+            animation-range-start: cover 27%;
+            animation-range-end:cover 48%;
+
+        }
+
+
+        @keyframes reveal {
+            to{background-size: 100% 100%;}
+        }
+
+
+        @media screen and (max-width:800px) {
+            .content{
+                height: 100vh;
+                width: 80%;
+               
+                
+            }
+
+            .content h1{
+            font-size: 30px;
+            
+        }
+        .content p{
+            font-size: 12px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="otherContent">
+
+        </div>
+
+
+
+
+
+        <div class="scroll-reveal">
+            <div class="content">
+                
+                <h1><span>Hi! I AM SKY</span></h1>
+                <p><span>hello i am shashi kant yadav. i am a full stack software developer. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus iste delectus impedit quo nostrum possimus architecto voluptatum corrupti fugit error, quidem deleniti tenetur eum asperiores a provident quae facilis, nemo sapiente incidunt.</span></p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="otherContent">
+        </div>
+
+    </div>
+</body>
+</html>
