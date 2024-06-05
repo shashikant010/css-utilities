@@ -12,22 +12,16 @@ function App() {
   })
 
 
-  useEffect(()=>{ 
-    
-  },[count])
+  
     const slideImage=()=>{
       slides.forEach((slide)=>{
         if(count>=slides.length-1) setCount(0)
         slide.style.transform=`translateX(-${count*100}%)`
       })
       setCount(count+1)
-      console.log(count)
-      
     }
 
-    slides.forEach(async(slide)=>{
-      const slidingImage = await setTimeout(slideImage,3000)
-    })
+  
 
   return (
     <>
@@ -38,7 +32,7 @@ function App() {
         <img src="https://picsum.photos/id/243/1000/500" className="slide" />
     </main>
     <div className="nav">
-     
+     <button onClick={slideImage}>next</button>
     </div>
     </>
   )
