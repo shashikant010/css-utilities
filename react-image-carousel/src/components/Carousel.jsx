@@ -1,11 +1,10 @@
-import React, { useCallback, useLayoutEffect, useReducer, useState, useTransition } from "react";
+import React, { useCallback, useEffect, useLayoutEffect, useReducer, useState, useTransition } from "react";
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 
-import "./Carousel.css";
 
 export const Carousel = ({ data }) => {
   const [slide, setSlide] = useState(0);
-  const [isImageSliding,setIsImageSliding] = useState(false)
+  const autoplay=false
 
   const nextSlide = () => {
     console.log("next");
@@ -17,6 +16,19 @@ export const Carousel = ({ data }) => {
   const prevSlide = () => {
     setSlide(slide === 0 ? data.length - 1 : slide - 1);
   };
+
+
+  async function setTime(){
+    setTimeout(nextSlide,4000)
+    let a = new Promise;
+    return a;
+  }
+ if(autoplay){ useEffect(()=>{
+    async function changeSlide(){
+      await setTime()
+    }
+    changeSlide()
+  },[slide])}
 
 
   return (
