@@ -4,7 +4,7 @@ import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 
 export const Carousel = ({ data }) => {
   const [slide, setSlide] = useState(0);
-  const autoplay=false
+  const autoplay=true
 
   const nextSlide = () => {
     console.log("next");
@@ -57,7 +57,7 @@ export const Carousel = ({ data }) => {
             width: 100%;
             height: 100%;
             position:relative;
-            transition: all linear 2s;
+            transition: all linear 1s;
             left:-${slide*600}px;
           }
         

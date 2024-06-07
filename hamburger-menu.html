@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hamburger button</title>
+    <style type="text/css">
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+        }
+        button{
+            background-color: transparent;
+        }
+
+        .line{
+            stroke-dasharray: 60 32 60 1000;
+            transition: all 1s;
+            transform-origin: center;
+            }
+            
+            button[aria-expanded="true"] .line{
+            stroke-dashoffset: 1 ;
+            stroke-dasharray:0 92 60 99 1000;
+            transform: rotate(45deg);
+            
+            
+        }
+
+    </style>
+</head>
+<body>
+    <button class="button-three" aria-controls="primary-navigation" aria-expanded="false" onCLick="openHamburger()">
+        <svg stroke="black" fill="none" class="hamburger" viewBox="-10 -10 120 120" width="250">
+            <path class="line" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70">
+            </path> 
+        </svg>
+    </button>
+</body>
+<script>
+    let isbuttonOpen=document.querySelector("button").ariaExpanded
+    console.log(isbuttonOpen)
+    function openHamburger(){
+        if(isbuttonOpen=="true"){
+            document.querySelector("button").ariaExpanded="false"
+            isbuttonOpen="false"
+        }
+        else{
+            document.querySelector("button").ariaExpanded="true"
+            isbuttonOpen="true"
+        }
+    }
+    
+</script>
+</html>
