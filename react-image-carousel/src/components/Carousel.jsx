@@ -4,7 +4,7 @@ import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 
 export const Carousel = ({ data }) => {
   const [slide, setSlide] = useState(0);
-  const autoplay=true
+  const [autoplay,setAutoplay]=useState("false")
 
   const nextSlide = () => {
     console.log("next");
@@ -18,21 +18,15 @@ export const Carousel = ({ data }) => {
   };
 
 
-  async function setTime(){
-    setTimeout(nextSlide,4000)
-    let a = new Promise((resolve, reject) => {
-      setTimeout(resolve, 100, 'foo');
-    });
-    return a;
-  }
 
 
  if(autoplay){ useEffect(()=>{
-    async function changeSlide(){
-      await setTime()
-    }
-    changeSlide()
-  },[slide])}
+    const changingId= setInterval(()=>{
+      nextSlide()
+    },2000)
+
+    return ()=>clearInterval(changingId);
+    })}
 
 
   return (
@@ -142,5 +136,7 @@ export const Carousel = ({ data }) => {
         })}
       </span>
     </div>
+
+    
   );
 };
